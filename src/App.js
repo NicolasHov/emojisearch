@@ -1,7 +1,8 @@
 import "./App.css";
-import emojis from "./emojis.json";
 import { useState } from "react";
-import Search from "./Search";
+import Search from "./components/Search";
+import Footer from "./components/Footer";
+
 function App() {
   const [search, setSearch] = useState(" ");
   const handleChange = (elem) => {
@@ -11,6 +12,7 @@ function App() {
   return (
     <div class="container">
       <Search func={handleChange} search={search} setSearch={setSearch} />
+      <Footer />
     </div>
   );
 }

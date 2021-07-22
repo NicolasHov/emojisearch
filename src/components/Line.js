@@ -1,11 +1,11 @@
-import emojis from "./emojis.json";
+import emojis from "../emojis.json";
 
 const Line = ({ title, symbol }) => {
   return (
     <ul class="Line">
-      <li>
-        {title}
-        {symbol}
+      <li onClick="">
+        <p>{title}</p>
+        <p>{symbol}</p>
       </li>
     </ul>
   );
