@@ -1,9 +1,16 @@
 import "./App.css";
-
+import emojis from "./emojis.json";
+import { useState } from "react";
+import Search from "./Search";
 function App() {
+  const [search, setSearch] = useState(" ");
+  const handleChange = (elem) => {
+    const value = elem.target.value;
+    setSearch(value);
+  };
   return (
-    <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
+    <div class="container">
+      <Search func={handleChange} search={search} setSearch={setSearch} />
     </div>
   );
 }
