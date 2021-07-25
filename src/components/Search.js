@@ -11,6 +11,7 @@ const Search = ({ func, search, setSearch }) => {
         placeholder="What emoji are you looking for ?"
         onChange={func}
       />
+      <span>Click on an emoji if you want to copy it</span>
       {emojis.map((elem, index) => {
         setSearch(search.toLowerCase());
         if (counter === 16) {
