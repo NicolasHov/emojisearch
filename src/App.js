@@ -1,18 +1,16 @@
 import "./App.css";
 import { useState } from "react";
 import Search from "./components/Search";
-import Footer from "./components/Footer";
 
 function App() {
   const [search, setSearch] = useState(" ");
-  const handleChange = (elem) => {
-    const value = elem.target.value;
+  const handleChange = (event) => {
+    const value = event.target.value;
     setSearch(value);
   };
   return (
-    <div class="container">
+    <div className="container">
       <Search func={handleChange} search={search} setSearch={setSearch} />
-      <Footer />
     </div>
   );
 }
